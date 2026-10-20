@@ -1,0 +1,37 @@
+:root {
+  --bg: #f6f7f9;
+  --text: #14181f;
+  --text-secondary: #5b6472;
+  --lines: #dde1e7;
+  --accent: #1f4fd8;
+
+  --bs-body-bg: var(--bg); /*bootstrap background*/
+  --bs-body-color: var(--text); /*bootstrap text*/
+  --bs-body-font-family:
+    "Hanken Grotesk Variable", system-ui, sans-serif; /*boostrap font*/
+  --bs-link-color-rgb:
+    31, 79, 216; /*link color,bootstrap forza a mettere i numeri esadecimali ma sarebbe --accent */
+  --bs-link-hover-color-rgb: 31, 79, 216; /*hover link color*/
+}
+
+.container {
+  max-width: 50rem;
+}
+.cv-section {
+  padding-block: 5rem;
+  border-top: 1px solid var(--lines);
+}
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+h2 {
+  font-size: clamp(1rem, 4vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+article > p {
+  color: var(--text-secondary);
+}
