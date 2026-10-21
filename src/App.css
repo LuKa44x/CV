@@ -3,15 +3,15 @@
   --text: #14181f;
   --text-secondary: #5b6472;
   --lines: #dde1e7;
-  --accent: #1f4fd8;
+  --accent: rgb(221, 79, 216);
 
   --bs-body-bg: var(--bg); /*bootstrap background*/
   --bs-body-color: var(--text); /*bootstrap text*/
   --bs-body-font-family:
     "Hanken Grotesk Variable", system-ui, sans-serif; /*boostrap font*/
   --bs-link-color-rgb:
-    31, 79, 216; /*link color,bootstrap forza a mettere i numeri esadecimali ma sarebbe --accent */
-  --bs-link-hover-color-rgb: 31, 79, 216; /*hover link color*/
+    221, 79, 216; /*link color,bootstrap forza a mettere 3 numeri decimali ma sarebbe --accent */
+  --bs-link-hover-color-rgb: 221, 79, 216; /*hover link color*/
 }
 
 .container {
@@ -21,17 +21,34 @@
   padding-block: 5rem;
   border-top: 1px solid var(--lines);
 }
+.cv-hero {
+  margin: 1.5rem;
+}
 h1 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   letter-spacing: -0.03em;
 }
 h2 {
-  font-size: clamp(1rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 h3 {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
 }
-article > p {
+article p {
   color: var(--text-secondary);
+  margin: 0;
+}
+a:focus-visible {
+  outline: solid var(--accent);
+  outline-width: thin;
+  outline-offset: 3px;
+  border-radius: 30%;
+}
+li + li {
+  /*margin solo dal secondo li in fila  */
+  margin-top: 0.5rem;
+}
+article + article {
+  margin-top: 3rem;
 }

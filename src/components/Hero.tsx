@@ -4,7 +4,7 @@ function Hero({ name, role, summary }: Pick<Cv, "name" | "role" | "summary">) {
   return (
     <>
       <div className="cv-hero ">
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex justify-content-between align-items-center flex-column flex-md-row">
           <h1>{name}</h1>
           <p>{role}</p>
         </div>
