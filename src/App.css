@@ -46,9 +46,42 @@ a:focus-visible {
   border-radius: 30%;
 }
 li + li {
-  /*margin solo dal secondo li in fila  */
+  /*margin solo dal secondo li in fila */
   margin-top: 0.5rem;
 }
 article + article {
   margin-top: 3rem;
+}
+
+/* main */
+/* tecnologie section */
+.marquee ul {
+  display: flex;
+}
+.marquee li {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin-top: 0;
+  font-size: 2rem;
+  margin-right: 5rem;
+}
+.marquee {
+  overflow: hidden;
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+.marquee__track:hover {
+  animation-play-state: paused;
+}
+@keyframes slide {
+  to {
+    transform: translateX(-50%); /* larghezza perfetta della lista */
+  }
+}
+/* Progetti section */
+
+.cv-progetti {
 }

@@ -8,7 +8,9 @@ function Hero({ name, role, summary }: Pick<Cv, "name" | "role" | "summary">) {
           <h1>{name}</h1>
           <p>{role}</p>
         </div>
-        <p className="py-5">{summary}</p>
+        <p style={{ whiteSpace: "pre-line" }} className="py-5">
+          {summary}
+        </p>
       </div>
     </>
   );

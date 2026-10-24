@@ -11,30 +11,42 @@ function App() {
           <Hero name={cv.name} role={cv.role} summary={cv.summary} />
         </header>
         <main>
-          <Section title="Corsi">
-            {cv.courses.map((e) => (
-              <EntryItem key={e.title} {...e} />
-            ))}
-          </Section>
-          <Section title="Formazione">
-            {cv.education.map((e) => (
-              <EntryItem key={e.title} {...e} />
-            ))}
-          </Section>
-          <Section title="Tecnologie">
-            <ul className="list-unstyled">
-              {/* bootstrap, rimozione dei pallini */}
-              {cv.technologies.map((e) => (
-                <li key={e}>{e}</li>
-              ))}
-            </ul>
-          </Section>
-          <Section title="Progetti">
+          <section className="cv-section">
+            {/* sezione tecnologie*/}
+            <div className="marquee">
+              <div className="marquee__track">
+                <ul className="list-unstyled">
+                  {/* bootstrap, rimozione dei pallini
+                  doppia lista per farla scorrere con lo slide */}
+                  {cv.technologies.map((e) => (
+                    <li key={e}>{e}</li>
+                  ))}
+                </ul>
+                <ul aria-hidden="true" className="list-unstyled">
+                  {cv.technologies.map((e) => (
+                    <li key={`${e}-copy`}>{e}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+          <Section title="Progetti" sectionName="progetti">
             {cv.projects.map((e) => (
               <EntryProjects key={e.title} {...e} />
             ))}
           </Section>
-          <Section title="Info">
+          <Section title="Formazione" sectionName="formazione">
+            {cv.education.map((e) => (
+              <EntryItem key={e.title} {...e} />
+            ))}
+          </Section>
+          <Section title="Corsi" sectionName="corsi">
+            {cv.courses.map((e) => (
+              <EntryItem key={e.title} {...e} />
+            ))}
+          </Section>
+
+          <Section title="Info" sectionName="info">
             <dl>
               {/* tag per le liste di coppie */}
               {cv.info.map((e) => (
@@ -48,7 +60,7 @@ function App() {
               ))}
             </dl>
           </Section>
-          <Section title="Contatti">
+          <Section title="Contatti" sectionName="contatti">
             <dl>
               {/* tag per le liste di coppie */}
               {cv.contacts.map((e) => (
