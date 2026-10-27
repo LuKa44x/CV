@@ -30,17 +30,50 @@ const cv: Cv = {
     { title: "TODO3", date: "TODO", description: "TODO3" },
   ],
   education: [
-    { title: "Superiori", date: "TODO1", description: "TODO1", vote: "95/100" },
-    { title: "Uni", date: "TODO2", description: "TODO2", vote: "106/110" },
+    {
+      title: "Università Telematica Pegaso",
+      subtitle: "L-31 - Scienze e tecnologie informatiche",
+      date: "2022-2025",
+      description: `Tesi - Sviluppo di una pagina web per il download del report di sostenibilità di Ferrero S.p.A.`,
+      vote: "106/110",
+    },
+    {
+      title: "Istituto Tecnico Industriale",
+      subtitle: "Informatica e Telecomunicazioni",
+      date: "2016-2021",
+      vote: "95/100",
+    },
+  ],
+  work: [
+    {
+      title: "Junior Full Stack Developer",
+      subtitle: "Etjca Group",
+      date: "Giugno 2026",
+      description:
+        "Sviluppo individuale di un gestionale completo per Bed and Breakfast",
+    },
   ],
   technologies: ["HTML5", "CSS3", "JS + TS", "React", "Bootstrap"],
   projects: [
     {
       title: "Gestionale B&B",
-      description: "TODO",
-      linkDemo: "TODO",
-      linkGithub: "TODO",
-      technology: ["TODO", "TODO1", "TODO2", "TODO3"],
+      description: "Gestionale web per Bed & Breakfast ",
+      linkDemo: "https://gestionale-b-b.vercel.app/",
+      linkGithub: "https://github.com/LuKa44x/gestionale-B-B",
+      technology: [
+        "React",
+        "TypeScript",
+        "Bootstrap",
+        "Next.js",
+        "PostgreSQL",
+        "Node.js",
+      ],
+    },
+    {
+      title: "Curriculum Vitae",
+      description: "Curriculum personale - 2026",
+      linkGithub: "https://github.com/LuKa44x/CV",
+      technology: ["React", "TypeScript", "CSS3", "Bootstrap"],
     },
   ],
   info: [

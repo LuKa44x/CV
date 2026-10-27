@@ -2,7 +2,8 @@
   --bg: #f6f7f9;
   --text: #14181f;
   --text-secondary: #5b6472;
-  --lines: #dde1e7;
+  --horizontal-lines: #dde1e7;
+  --vertical-lines: rgb(180, 179, 180);
   --accent: rgb(221, 79, 216);
 
   --bs-body-bg: var(--bg); /*bootstrap background*/
@@ -19,7 +20,7 @@
 }
 .cv-section {
   padding-block: 5rem;
-  border-top: 1px solid var(--lines);
+  border-top: 1px solid var(--horizontal-lines);
 }
 .cv-hero {
   margin: 1.5rem;
@@ -33,7 +34,7 @@ h2 {
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 h3 {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
 }
 article p {
   color: var(--text-secondary);
@@ -45,10 +46,7 @@ a:focus-visible {
   outline-offset: 3px;
   border-radius: 30%;
 }
-li + li {
-  /*margin solo dal secondo li in fila */
-  margin-top: 0.5rem;
-}
+
 article + article {
   margin-top: 3rem;
 }
@@ -83,5 +81,46 @@ article + article {
 }
 /* Progetti section */
 
-.cv-progetti {
+/* progetti info */
+.cv-progetti .children article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* link demo e github */
+.cv-progetti .children article > :last-child {
+  align-self: flex-end;
+}
+/* lista tecnologie */
+.cv-progetti .children ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+/* formazione section */
+.cv-formazione,
+.cv-esperienze {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* da vedere se mi piace o no */
+@media (min-width: 768px) {
+  /* linea estetica tra titolo e info, sopra dimensione m di boostrap */
+  .cv-progetti .children {
+    border-left: 1px solid var(--vertical-lines);
+    padding-left: 2rem;
+  }
+  .cv-esperienze {
+    border-left: 1px solid var(--vertical-lines);
+  }
+  .cv-formazione,
+  .cv-esperienze {
+    border-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+    padding-top: 0;
+  }
 }

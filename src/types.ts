@@ -2,14 +2,14 @@ export type Entry = {
   title: string;
   subtitle?: string; //opzionale
   date: string;
-  description: string;
+  description?: string;
   vote?: string;
 };
 
 export type EntryProject = {
   title: string;
   description: string;
-  linkDemo: string;
+  linkDemo?: string;
   linkGithub: string;
   technology: string[];
 };
@@ -26,6 +26,7 @@ export type Cv = {
   summary: string; //hero
   courses: Entry[]; //sezione corsi
   education: Entry[]; //sezione educazione
+  work: Entry[]; //sezione lavoro
   technologies: string[]; //sezione tecnologie
   projects: EntryProject[]; //sezione progetti
   info: EntryContact[]; //sezione info

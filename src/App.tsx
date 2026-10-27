@@ -35,11 +35,38 @@ function App() {
               <EntryProjects key={e.title} {...e} />
             ))}
           </Section>
-          <Section title="Formazione" sectionName="formazione">
-            {cv.education.map((e) => (
-              <EntryItem key={e.title} {...e} />
-            ))}
-          </Section>
+          <section>
+            <div className="row">
+              <div
+                className="cv-section d-flex justify-content-md-around"
+                style={{ paddingTop: "5rem", paddingBottom: "0" }}
+              >
+                <h2 className="col-md-6">Formazione</h2>
+                <h2
+                  className="col-md-6 d-md-block"
+                  style={{ paddingLeft: "12px", display: "none" }}
+                >
+                  Esperienze
+                </h2>
+              </div>
+              <div className="col-md-6 cv-section cv-formazione">
+                {cv.education.map((e) => (
+                  <EntryItem key={e.title} {...e} />
+                ))}
+              </div>
+              <h2
+                className="col-md-6 d-md-none"
+                style={{ paddingLeft: "12px" }}
+              >
+                Esperienze
+              </h2>
+              <div className="col-md-6 cv-section cv-esperienze">
+                {cv.work.map((e) => (
+                  <EntryItem key={e.title} {...e} />
+                ))}
+              </div>
+            </div>
+          </section>
           <Section title="Corsi" sectionName="corsi">
             {cv.courses.map((e) => (
               <EntryItem key={e.title} {...e} />
