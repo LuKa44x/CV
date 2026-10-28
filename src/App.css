@@ -4,15 +4,15 @@
   --text-secondary: #5b6472;
   --horizontal-lines: #dde1e7;
   --vertical-lines: rgb(180, 179, 180);
-  --accent: rgb(221, 79, 216);
+  --accent: rgb(72, 59, 126);
 
   --bs-body-bg: var(--bg); /*bootstrap background*/
   --bs-body-color: var(--text); /*bootstrap text*/
   --bs-body-font-family:
     "Hanken Grotesk Variable", system-ui, sans-serif; /*boostrap font*/
   --bs-link-color-rgb:
-    221, 79, 216; /*link color,bootstrap forza a mettere 3 numeri decimali ma sarebbe --accent */
-  --bs-link-hover-color-rgb: 221, 79, 216; /*hover link color*/
+    72, 59, 126; /*link color,bootstrap forza a mettere 3 numeri decimali ma sarebbe --accent */
+  --bs-link-hover-color-rgb: 72, 59, 126; /*hover link color*/
 }
 
 .container {
@@ -105,7 +105,6 @@ article + article {
   border-top: none;
 }
 
-/* da vedere se mi piace o no */
 @media (min-width: 768px) {
   /* linea estetica tra titolo e info, sopra dimensione m di boostrap */
   .cv-progetti .children {

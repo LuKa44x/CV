@@ -25,9 +25,23 @@ const cv: Cv = {
 
   Fuori dal codice sono un atleta agonista di calisthenics, mi piace gareggiare e con costanza migliorare le mie skills.`,
   courses: [
-    { title: "TODO1", date: "TODO", description: "TODO1" },
-    { title: "TODO2", date: "TODO", description: "TODO2" },
-    { title: "TODO3", date: "TODO", description: "TODO3" },
+    {
+      title: "Sviluppatore Full Stack",
+      date: "03-2026/05-2026",
+      description:
+        "Formazione di 248h con l'obiettivo di programmare e gestire autonomamente client, server e database ed essere in grado di realizzare un progetto dall’inizio alla fine",
+    },
+    {
+      title: "The Odin Project",
+      date: "2025/2026",
+      description:
+        "Un percorso di studio online completamente gratuito e open-source progettato per insegnare lo sviluppo web full-stack da zero. Terminato con il penultimo capitolo prima dell'introduzione al back-end",
+    },
+    {
+      title: "Foundational C# with Microsoft",
+      date: "01/2024",
+      description: "Certificazione da sviluppatore in C#",
+    },
   ],
   education: [
     {
@@ -50,7 +64,7 @@ const cv: Cv = {
       subtitle: "Etjca Group",
       date: "Giugno 2026",
       description:
-        "Sviluppo individuale di un gestionale completo per Bed and Breakfast",
+        "Sviluppo individuale di un gestionale full-stack per Bed and Breakfast",
     },
   ],
   technologies: ["HTML5", "CSS3", "JS + TS", "React", "Bootstrap"],

@@ -95,7 +95,9 @@ function App() {
                   <dt>{e.label}</dt> {/* tag per l’etichetta */}
                   <dd>
                     {/* tag per il valore */}
-                    <a href={e.href}>{e.value}</a>
+                    <a target="_blank" rel="noopener noreferrer" href={e.href}>
+                      {e.value}
+                    </a>
                   </dd>
                 </div>
               ))}

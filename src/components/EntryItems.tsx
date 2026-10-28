@@ -35,11 +35,11 @@ export function EntryProjects({
       </ul>
       <div className="d-flex gap-3">
         {linkDemo && (
-          <a href={linkDemo} target="_blank" rel="noreferrer">
+          <a href={linkDemo} target="_blank" rel="noopener noreferrer">
             Demo
           </a>
         )}
-        <a href={linkGithub} target="_blank" rel="noreferrer">
+        <a href={linkGithub} target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
       </div>
