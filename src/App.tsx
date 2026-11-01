@@ -3,11 +3,42 @@ import Hero from "./components/Hero";
 import Section from "./components/Section";
 import { EntryItem, EntryProjects } from "./components/EntryItems";
 import cv from "./data/cv";
+import { useEffect, useState } from "react";
+import ThemeToggle from "./components/ThemeToggle";
+import type { Mode } from "./types";
+
+function getInitialMode(): Mode {
+  try {
+    const saved = localStorage.getItem("mode");
+    if (saved === "light" || saved === "dark") return saved;
+  } catch {
+    // localStorage non disponibile, si usa la preferenza del sistema
+  }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
+
 function App() {
+  const [mode, setMode] = useState<Mode>(getInitialMode);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-bs-theme", mode);
+    try {
+      localStorage.setItem("mode", mode);
+    } catch {
+      // niente da fare: il tema funziona lo stesso, solo non viene ricordato
+    }
+  }, [mode]);
+
+  const toggleMode = () => setMode((m) => (m === "light" ? "dark" : "light"));
   return (
     <>
       <div className="container">
         <header>
+          <div className="d-flex justify-content-end pt-3">
+            <ThemeToggle mode={mode} onToggle={toggleMode} />
+          </div>
           <Hero name={cv.name} role={cv.role} summary={cv.summary} />
         </header>
         <main>

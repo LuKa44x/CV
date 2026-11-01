@@ -4,15 +4,23 @@
   --text-secondary: #5b6472;
   --horizontal-lines: #dde1e7;
   --vertical-lines: rgb(180, 179, 180);
-  --accent: rgb(72, 59, 126);
+  --accent: 72, 59, 126;
 
   --bs-body-bg: var(--bg); /*bootstrap background*/
   --bs-body-color: var(--text); /*bootstrap text*/
   --bs-body-font-family:
     "Hanken Grotesk Variable", system-ui, sans-serif; /*boostrap font*/
-  --bs-link-color-rgb:
-    72, 59, 126; /*link color,bootstrap forza a mettere 3 numeri decimali ma sarebbe --accent */
-  --bs-link-hover-color-rgb: 72, 59, 126; /*hover link color*/
+  --bs-link-color-rgb: var(--accent); /*link color bootstrap  */
+  --bs-link-hover-color-rgb: var(--accent); /*hover link color*/
+}
+
+[data-bs-theme="dark"] {
+  --bg: #12151a;
+  --text: #e8ebf0;
+  --text-secondary: #9aa3b0;
+  --horizontal-lines: #2a303a;
+  --vertical-lines: #3a414c;
+  --accent: 132, 134, 136;
 }
 
 .container {

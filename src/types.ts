@@ -32,3 +32,5 @@ export type Cv = {
   info: EntryContact[]; //sezione info
   contacts: EntryContact[]; //sezione contatti
 };
+
+export type Mode = "light" | "dark";
